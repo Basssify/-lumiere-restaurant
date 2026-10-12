@@ -1,0 +1,660 @@
+/* HomePage Luxury Styling */
+
+/* 1. Hero Section */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: calc(var(--header-height) + 2rem);
+  padding-bottom: 5rem;
+  overflow: hidden;
+}
+
+.hero-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+  animation: slowZoom 24s infinite alternate ease-in-out;
+  filter: brightness(0.65) contrast(1.1);
+}
+
+@keyframes slowZoom {
+  0% { transform: scale(1.02); }
+  100% { transform: scale(1.12); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(8, 8, 8, 0.45) 0%, rgba(8, 8, 8, 0.9) 80%);
+}
+
+.hero-gradient-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background: linear-gradient(0deg, var(--bg-primary) 0%, transparent 100%);
+}
+
+.hero-container {
+  position: relative;
+  z-index: 10;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.hero-content {
+  max-width: 820px;
+  animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-badge-wrap {
+  margin-bottom: 1.5rem;
+}
+
+.hero-headline {
+  font-size: 2.8rem;
+  line-height: 1.15;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  .hero-headline {
+    font-size: 4.2rem;
+  }
+}
+
+.hero-narrative {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 680px;
+  font-weight: 300;
+}
+
+.hero-narrative strong {
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.btn-large {
+  padding: 1.15rem 2.2rem;
+  font-size: 0.88rem;
+}
+
+.hero-whatsapp-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(16, 16, 16, 0.85);
+  border: 1px solid var(--gold-border);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.pulse-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: #25D366;
+  box-shadow: 0 0 10px #25D366;
+}
+
+.hero-wa-link {
+  color: var(--gold-primary);
+  font-weight: 700;
+  transition: color var(--transition-fast);
+}
+
+.hero-wa-link:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
+
+/* Stats Bar */
+.hero-stats-bar {
+  position: relative;
+  z-index: 10;
+  margin-top: 3.5rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(12, 12, 12, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 1.75rem 0;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .stats-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-icon {
+  color: var(--gold-primary);
+  flex-shrink: 0;
+}
+
+.stat-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.stat-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* 2. Philosophy Section */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .philosophy-grid {
+    grid-template-columns: 1.05fr 1.15fr;
+    gap: 5rem;
+  }
+}
+
+.philosophy-visual {
+  position: relative;
+}
+
+.visual-image-main {
+  width: 88%;
+  height: 480px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--gold-border);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.visual-image-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visual-image-secondary {
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  width: 55%;
+  height: 280px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid var(--gold-primary);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+}
+
+.visual-image-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.philosophy-badge-card {
+  position: absolute;
+  top: 2rem;
+  left: -1rem;
+  background: rgba(14, 14, 14, 0.95);
+  border: 1px solid var(--gold-primary);
+  padding: 1rem 1.4rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.years-number {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  line-height: 1;
+}
+
+.years-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+.gold-divider-left {
+  width: 60px;
+  height: 2px;
+  background: var(--gold-primary);
+  margin-bottom: 1.5rem;
+}
+
+.philosophy-desc {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.pillars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.pillar-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.pillar-bullet {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--gold-border);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pillar-item h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.pillar-item p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* 3. Signature Dishes */
+.signature-section {
+  background: #0b0b0b;
+}
+
+.signature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 640px) {
+  .signature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .signature-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.signature-footer-cta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sub-cta-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* 4. Ambiance Section */
+.ambiance-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .ambiance-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ambiance-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.ambiance-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold-border-bright);
+}
+
+.ambiance-img-wrap {
+  height: 260px;
+  overflow: hidden;
+}
+
+.ambiance-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.ambiance-card:hover .ambiance-img-wrap img {
+  transform: scale(1.08);
+}
+
+.ambiance-card-info {
+  padding: 1.75rem;
+}
+
+.ambiance-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  margin-bottom: 0.5rem;
+}
+
+.ambiance-card-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.85rem;
+}
+
+.ambiance-card-info p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.ambiance-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  transition: color var(--transition-fast);
+}
+
+.ambiance-link:hover {
+  color: var(--gold-primary);
+  gap: 0.65rem;
+}
+
+/* 5. Testimonials Section */
+.testimonials-section {
+  background: #0a0a0a;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.testimonial-card {
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.testimonial-text {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  flex: 1;
+  font-style: italic;
+}
+
+.testimonial-author-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-crest {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--gold-gradient);
+  color: #0c0c0c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.author-name {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.author-title {
+  font-size: 0.78rem;
+  color: var(--gold-light);
+  display: block;
+}
+
+.author-occasion {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.accolades-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(14, 14, 14, 0.6);
+}
+
+@media (min-width: 992px) {
+  .accolades-strip {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.accolades-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.accolades-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.accolade-badge {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.accolade-badge strong {
+  color: var(--gold-primary);
+}
+
+/* 6. CTA Banner Section */
+.cta-banner-section {
+  position: relative;
+  padding: 7rem 0;
+  overflow: hidden;
+}
+
+.cta-backdrop {
+  position: absolute;
+  inset: 0;
+}
+
+.cta-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4) contrast(1.15);
+}
+
+.cta-dark-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(8, 8, 8, 0.7) 0%, rgba(8, 8, 8, 0.95) 90%);
+}
+
+.cta-container {
+  position: relative;
+  z-index: 5;
+}
+
+.cta-content-box {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.4rem;
+  margin: 1.5rem 0 1.25rem 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .cta-title {
+    font-size: 3.4rem;
+  }
+}
+
+.cta-desc {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.cta-buttons-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.cta-footnotes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.75rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.cta-footnotes span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+

@@ -1,0 +1,347 @@
+/* Reservations Page Luxury Styling */
+
+.reservations-page {
+  padding-top: var(--header-height);
+  min-height: 100vh;
+}
+
+/* Hero */
+.reserve-hero {
+  position: relative;
+  padding: 5.5rem 0 4.5rem 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.reserve-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.reserve-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.28) contrast(1.15);
+}
+
+.reserve-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.6) 0%, rgba(8, 8, 8, 0.95) 100%);
+}
+
+.reserve-hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+}
+
+.reserve-hero-title {
+  font-size: 2.8rem;
+  margin: 1.25rem 0 1rem 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .reserve-hero-title {
+    font-size: 4rem;
+  }
+}
+
+.reserve-hero-desc {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-weight: 300;
+}
+
+/* Main Grid */
+.reserve-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .reserve-grid {
+    grid-template-columns: 1.4fr 0.9fr;
+    gap: 3.5rem;
+  }
+}
+
+.reserve-card {
+  padding: 2.5rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .reserve-card {
+    padding: 3rem 2.8rem;
+  }
+}
+
+.reserve-card-header {
+  margin-bottom: 2rem;
+}
+
+.reserve-card-header h3 {
+  font-size: 1.8rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.reserve-card-header p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+/* Luxury Form */
+.luxury-reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .form-row-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-row-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .form-row-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.45rem;
+  font-weight: 600;
+}
+
+.form-field label svg {
+  color: var(--gold-primary);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  background: #151515;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  transition: all var(--transition-fast);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.22);
+}
+
+.form-field input.input-error {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.field-error-msg {
+  font-size: 0.76rem;
+  color: #f87171;
+  margin-top: 0.35rem;
+}
+
+.reserve-wa-notice {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  background: rgba(37, 211, 102, 0.06);
+  border: 1px solid rgba(37, 211, 102, 0.25);
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius-sm);
+  margin: 0.5rem 0 1rem 0;
+}
+
+.reserve-wa-notice strong {
+  display: block;
+  font-size: 0.85rem;
+  color: #4ade80;
+  margin-bottom: 0.2rem;
+}
+
+.reserve-wa-notice p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* Success State */
+.reserve-success-state {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.success-crest-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-full);
+  background: rgba(212, 175, 55, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.reserve-success-state h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.success-body-p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.summary-ticket {
+  background: #111;
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  max-width: 480px;
+  margin: 0 auto 2.5rem auto;
+  text-align: left;
+}
+
+.ticket-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.88rem;
+}
+
+.ticket-row:last-child {
+  border-bottom: none;
+}
+
+.ticket-row span {
+  color: var(--text-muted);
+}
+
+.ticket-row strong {
+  color: var(--gold-light);
+}
+
+.success-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Guidelines Sidebar */
+.info-guidelines-card {
+  padding: 2.5rem 2rem;
+}
+
+.info-guidelines-card h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.guidelines-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.guidelines-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.guidelines-list strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.guidelines-list p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.direct-call-box {
+  background: rgba(212, 175, 55, 0.06);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.direct-call-title {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.direct-phone-link {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  display: block;
+  margin-bottom: 0.35rem;
+  transition: color var(--transition-fast);
+}
+
+.direct-phone-link:hover {
+  color: var(--gold-light);
+}
+
+.direct-call-sub {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+

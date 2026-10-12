@@ -1,0 +1,64 @@
+.lumiere-toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.lumiere-toast {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(18, 18, 18, 0.95);
+  border: 1px solid var(--gold-primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), var(--gold-glow);
+  color: var(--text-primary);
+  padding: 0.95rem 1.4rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  backdrop-filter: blur(16px);
+  animation: slideToastIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: auto;
+}
+
+.lumiere-toast-icon {
+  color: var(--gold-primary);
+  flex-shrink: 0;
+  animation: spinSlow 4s linear infinite;
+}
+
+.lumiere-toast-text {
+  color: var(--text-primary);
+}
+
+@keyframes slideToastIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 640px) {
+  .lumiere-toast-container {
+    bottom: 1.5rem;
+    right: 1rem;
+    left: 1rem;
+  }
+  .lumiere-toast {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
